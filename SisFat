@@ -1,0 +1,56 @@
+public class Fatura {
+	private String numero;
+	private String descricao;
+	private int qtdeComprada;
+	private double valor;
+	private String vValorconv;
+	
+
+	public double getValordaFatura(int vQtde, double vValor) {
+		if (vValor > 0) {
+			return (vQtde * vValor);
+		} else {
+			return 0.0;
+		}
+	}
+
+	public String getNumero() {
+		return numero;
+	}
+
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public int getQtdeComprada() {
+		return qtdeComprada;
+	}
+
+	public void setQtdeComprada(int qtdeComprada) {
+		this.qtdeComprada = qtdeComprada;
+	}
+
+	public double getValor() {
+		return  valor;
+	}
+
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+	
+	public String getvValorconv() {
+		return  vValorconv;
+	}
+	
+	public void setConvValor(String vValorx){
+		this.vValorconv = vValorx.replace(",", ".");  
+	}
+}
