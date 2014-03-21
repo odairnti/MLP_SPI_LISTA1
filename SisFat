@@ -1,3 +1,26 @@
+import javax.swing.JOptionPane;
+
+public class Programa {
+
+	/**
+	 * Simples sistema dar entrada de informações sobre produtos com quantidades e valores.
+	 * Feito Por: Odair em: 21/03/2014
+	 */
+	public static void main(String[] args) {
+		Fatura ft = new Fatura();
+
+		ft.setNumero(JOptionPane.showInputDialog(null, "Digite o número:"));
+		ft.setDescricao(JOptionPane.showInputDialog(null, "Digite a descrição:"));
+		ft.setQtdeComprada(Integer.parseInt(JOptionPane.showInputDialog(null,"Digite a quant. comprada:")));
+		ft.setConvValor(JOptionPane.showInputDialog(null, "Digite o valor:"));
+		Double valorDouble = Double.parseDouble(ft.getvValorconv());
+		ft.setValor(valorDouble);
+		
+		JOptionPane.showMessageDialog(null,ft.getValordaFatura(ft.getQtdeComprada(), ft.getValor()));
+
+	}
+}
+
 public class Fatura {
 	private String numero;
 	private String descricao;
